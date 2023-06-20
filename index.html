@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter</title>
+</head>
+
+<body>
+
+  <h2>O método Filter </h2>
+
+  <p>Todos os elementos da lista, menos banana.</p>
+
+  <p id="array"></p>
+
+  <script>
+
+    const list = [" pera", " laranja", " maçã", " uva", " banana", " melancia", " arroz", " feijão", " café", " biscoito", " óleo", " tomate", " cebola", " melão", " cereal"," maracujá"," alho"];
+
+    document.getElementById("array").innerHTML = list.filter(checkAdult);
+
+    function checkAdult(list) {
+      return list != " banana";
+    }
+  </script>
+
+  <p>Digite algum elemento da lista</p>
+
+  <p><input type="string" id="caixa" value=" "></p>
+
+  <p>Clique em "Filtrar"</p>
+
+  <button onclick="myFunction()">Filtrar</button>
+
+  <p id="elementos"></p>
+
+  <script>
+    const lista = [" pera", " laranja", " maçã", " uva", " banana", " melancia", " arroz", " feijão", " café", " biscoito", " óleo", " tomate", " cebola", " melão", " cereal"," maracujá"," alho"];
+
+    function checkAge(lista) {
+      return lista != document.getElementById("caixa").value;
+    }
+
+    function myFunction() {
+      document.getElementById("elementos").innerHTML = lista.filter(checkAge);
+    }
+
+  </script>
+
+</body>
+
+</html>
